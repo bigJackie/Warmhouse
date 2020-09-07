@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="380sp"
+        android:layout_height="200sp"
+        android:background="@drawable/radius_grey_100"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.1"/>
+
+    <TextView
+        android:layout_width="200sp"
+        android:layout_height="120sp"
+        android:text="距离父亲生日还有10天\n\n距离母亲节还有20天\n\n给家里打个电话吧"
+        android:textColor="@color/smssdk_common_black"
+        android:textAlignment="viewStart"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintVertical_bias="0.15"/>
+
+    <TextView
+        android:layout_width="120sp"
+        android:layout_height="120sp"
+        android:background="@drawable/radius_grey_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintVertical_bias="0.15"/>
+
+    <TextView
+        android:layout_width="30sp"
+        android:layout_height="40sp"
+        android:text="5"
+        android:textColor="@color/smssdk_common_black"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintVertical_bias="0.15"/>
+
+    <TextView
+        android:layout_width="100sp"
+        android:layout_height="20sp"
+        android:text="month"
+        android:textColor="@color/smssdk_common_black"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintVertical_bias="0.16"/>
+
+    <TextView
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:text="21"
+        android:textColor="@color/smssdk_common_black"
+        android:textAlignment="center"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.32"
+        app:layout_constraintVertical_bias="0.22"/>
+
+    <TextView
+        android:layout_width="100sp"
+        android:layout_height="20sp"
+        android:text="Day"
+        android:textColor="@color/smssdk_common_black"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintVertical_bias="0.23"/>
+
+
+    <TextView
+        android:layout_width="100sp"
+        android:layout_height="40sp"
+        android:background="@color/smssdk_common_white"
+        android:text="2020.5"
+        android:textColor="@color/grey_600"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintVertical_bias="0.37"/>
+
+    <com.haibin.calendarview.CalendarLayout
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:default_status="shrink"
+        app:calendar_show_mode="only_month_view"
+        app:calendar_content_view_id="@+id/recyclerView"
+        android:weightSum="0.5">
+
+        <com.haibin.calendarview.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/smssdk_common_white"
+            app:calendar_height="50dp"
+            app:current_month_text_color="@color/smssdk_black"
+            app:current_month_lunar_text_color="@color/grey_400"
+            app:min_year="2000"
+            app:other_month_text_color="#e1e1e1"
+            app:scheme_text="假"
+            app:scheme_text_color="#333"
+            app:scheme_theme_color="#333"
+            app:selected_text_color="@color/smssdk_common_white"
+            app:selected_lunar_text_color="@color/smssdk_common_white"
+            app:selected_theme_color="@color/red_600"
+            app:week_start_with="sun"
+            app:week_background="@color/smssdk_common_white"
+            app:month_view_show_mode="mode_only_current"
+            app:week_text_color="@color/grey_400"
+            />
+
+    </com.haibin.calendarview.CalendarLayout>
+
+    <TextView
+        android:layout_width="380sp"
+        android:layout_height="40sp"
+        android:background="@drawable/radius_grey_100"
+        android:text="农历：庚子鼠年四月廿九"
+        android:textColor="@color/grey_600"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.98"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

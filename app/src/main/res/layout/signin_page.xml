@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/signin_page"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    tools:context=".SigninPage">
+
+    <ImageView android:id="@+id/avatarView"
+        android:background="@drawable/user_avatar"
+        android:layout_width="120.0dip"
+        android:layout_height="120.0dip"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <com.example.nest.PhoneEditText
+        android:gravity="center"
+        android:id="@+id/phoneText"
+        android:layout_width="300.0dip"
+        android:layout_height="50.0dip"
+        android:inputType="phone"
+        android:hint="@string/sign_in_phone_text_hint"
+        android:maxLength="13"
+        android:autofillHints="@string/autofiiHints"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <EditText
+        android:gravity="center"
+        android:id="@+id/pwdText"
+        android:layout_width="300.0dip"
+        android:layout_height="50.0dip"
+        android:hint="@string/sign_in_pwd_text_hint"
+        android:maxLength="16"
+        android:inputType="textPassword"
+        android:autofillHints="@string/autofiiHints"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:backgroundTint="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <ImageButton
+        android:id="@+id/inVisibleButton"
+        android:background="@drawable/invisible"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/pwdText"
+        app:layout_constraintEnd_toEndOf="@id/pwdText"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@id/pwdText"
+        app:layout_constraintTop_toTopOf="@id/pwdText"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageButton
+        android:id="@+id/visibleButton"
+        android:background="@drawable/visible"
+        android:layout_width="30.0dip"
+        android:layout_height="30.0dip"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="@id/pwdText"
+        app:layout_constraintEnd_toEndOf="@id/pwdText"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@id/pwdText"
+        app:layout_constraintTop_toTopOf="@id/pwdText"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <ImageButton
+        android:id="@+id/signinButton"
+        android:background="@drawable/signin_btn"
+        android:layout_width="70.0dip"
+        android:layout_height="70.0dip"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.75" />
+
+    <Button
+        android:textColor="@drawable/btn_shadow_reverse"
+        android:id="@+id/forgetPWDButton"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:text="@string/forget_pwd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/signinButton"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <Button
+        android:textColor="@drawable/btn_shadow_reverse"
+        android:id="@+id/signupButton"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:text="@string/to_sign_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@id/signinButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66" />
+
+    <Button
+        android:textColor="@drawable/btn_shadow_reverse"
+        android:id="@+id/otherSigninButton"
+        android:background="#00000000"
+        android:layout_width="wrap_content"
+        android:layout_height="30.0dip"
+        android:text="@string/other_sign_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.985" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
